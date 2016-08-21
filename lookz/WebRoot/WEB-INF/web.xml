@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>com.bin.lookz.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>adminLoginServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.adminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsAddGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsAddGoodsServlet</servlet-class>
+    <init-param>
+		<param-name>rootDir</param-name>
+		<param-value>file</param-value>
+	</init-param>
+	<init-param>
+		<param-name>allowlist</param-name>
+		<param-value>doc,mp3,txt,pdf,jpg,jpeg,png</param-value>
+	</init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>TypeServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.TypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsShowGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsShowGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TasteTypeServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.TasteTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HealthTypeServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.HealthTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ManufacturerServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.ManufacturerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsDelGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsDelGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsUpdGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsUpdGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsUpdateGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsUpdateGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddShoppingCarServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AddShoppingCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelShopGoodsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.DelShopGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RemoveUsersServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.RemoveUsersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAddressServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AddAddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>showCheckoutServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.showCheckoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CarToCheckoutServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.CarToCheckoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckoutServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.CheckoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminShowServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminDelUsersServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminDelUsersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProductdetailServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.ProductdetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdUserServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.UpdUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.MessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminShowMessageServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminShowMessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminDelMsgServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminDelMsgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PpServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.PpServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PriceServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.PriceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCheckCodeServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.GetCheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsAddAdminsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsAddAdminsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsShowAdminsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsShowAdminsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminsDelAdminsServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.AdminsDelAdminsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <servlet-class>com.bin.lookz.servlet.CheckNameServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminLoginServlet</servlet-name>
+    <url-pattern>/adminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsAddGoodsServlet</servlet-name>
+    <url-pattern>/AdminsAddGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TypeServlet</servlet-name>
+    <url-pattern>/TypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsShowGoodsServlet</servlet-name>
+    <url-pattern>/AdminsShowGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TasteTypeServlet</servlet-name>
+    <url-pattern>/TasteTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HealthTypeServlet</servlet-name>
+    <url-pattern>/HealthTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManufacturerServlet</servlet-name>
+    <url-pattern>/ManufacturerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsDelGoodsServlet</servlet-name>
+    <url-pattern>/AdminsDelGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsUpdGoodsServlet</servlet-name>
+    <url-pattern>/AdminsUpdGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsUpdateGoodsServlet</servlet-name>
+    <url-pattern>/AdminsUpdateGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShoppingCarServlet</servlet-name>
+    <url-pattern>/AddShoppingCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelShopGoodsServlet</servlet-name>
+    <url-pattern>/DelShopGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RemoveUsersServlet</servlet-name>
+    <url-pattern>/RemoveUsersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAddressServlet</servlet-name>
+    <url-pattern>/AddAddressServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>showCheckoutServlet</servlet-name>
+    <url-pattern>/showCheckoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CarToCheckoutServlet</servlet-name>
+    <url-pattern>/CarToCheckoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckoutServlet</servlet-name>
+    <url-pattern>/CheckoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowServlet</servlet-name>
+    <url-pattern>/AdminShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelUsersServlet</servlet-name>
+    <url-pattern>/AdminDelUsersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductdetailServlet</servlet-name>
+    <url-pattern>/ProductdetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdUserServlet</servlet-name>
+    <url-pattern>/UpdUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/MessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminShowMessageServlet</servlet-name>
+    <url-pattern>/AdminShowMessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDelMsgServlet</servlet-name>
+    <url-pattern>/AdminDelMsgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PpServlet</servlet-name>
+    <url-pattern>/PpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PriceServlet</servlet-name>
+    <url-pattern>/PriceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <url-pattern>/CheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCheckCodeServlet</servlet-name>
+    <url-pattern>/GetCheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsAddAdminsServlet</servlet-name>
+    <url-pattern>/AdminsAddAdminsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsShowAdminsServlet</servlet-name>
+    <url-pattern>/AdminsShowAdminsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminsDelAdminsServlet</servlet-name>
+    <url-pattern>/AdminsDelAdminsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <url-pattern>/CheckNameServlet</url-pattern>
+  </servlet-mapping>
+
+  
+</web-app>
